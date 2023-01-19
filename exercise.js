@@ -42,4 +42,14 @@ console.log(courceGroup.goal[1]);
 //    - The "main goals" variable should also be dynamic: The command should work
 //      with ANY list of values
 //    - The custom command should provide the accessed value (i.e. the list element)
+
+function accessMainGoal(array, arrayIndex) {
+  let arrayElement = array[arrayIndex];
+  return arrayElement;
+}
+
 // 6) Execute your custom command from (5) and output ("alert") the result
+
+let firstGoal = accessMainGoal(courceGroup.goal, 2);
+
+console.log(firstGoal);
