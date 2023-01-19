@@ -28,13 +28,18 @@ let job = {
   ],
 };
 
-function resultAdultYears() {
-  result = age - 10;
+let totalAdultYears;
+
+function resultAdultYears(userAge) {
+  return userAge - 10;
 }
 
-resultAdultYears();
-console.log(result);
+totalAdultYears = resultAdultYears(100);
+console.log(totalAdultYears);
 
 age = 50;
-resultAdultYears();
-console.log(result);
+totalAdultYears = resultAdultYears(age);
+console.log(totalAdultYears);
+
+totalAdultYears = resultAdultYears("Hi");
+console.log(totalAdultYears);
