@@ -8,31 +8,32 @@
 //    - A variable that stores the name of an online course of your choice
 //    - A variable that stores the price of that course
 //    - A variable that stores the three main goals that you have, when taking this course
-let online = "Online Course";
-let price = 12000;
+let courceName = "Online Course";
+let courceprice = 12000;
 let mainGoal = ["guts", "effort", "patience"];
 
 // 2) Output ("alert") the three variable values
 
-console.log(online);
-console.log(price);
+console.log(courceName);
+console.log(courceprice);
 console.log(mainGoal);
 
 // 3) Try "grouping" the three variables together and still output their values thereafter
 
-function onlineStudy() {
-  online = "Online Course";
-  price = 12000;
-  mainGoal = ["guts", "effort", "patience"];
-}
+let courceGroup = {
+  name: courceName,
+  price: courceprice,
+  goal: mainGoal,
+};
 
-console.log(online);
-console.log(price);
-console.log(mainGoal);
+console.log(courceGroup);
+console.log(courceGroup.name);
+console.log(courceGroup.price);
+console.log(courceGroup.goal);
 
 // 4) Also output the second element in your "main goals" variable
 
-console.log(mainGoal[1]);
+console.log(courceGroup.goal[1]);
 
 // 5) Add a custom command that does the following:
 //    - Use your "main goals" variable and access an element by its identifier
