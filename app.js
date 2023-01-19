@@ -43,3 +43,12 @@ console.log(totalAdultYears);
 
 totalAdultYears = resultAdultYears("Hi");
 console.log(totalAdultYears);
+
+let person = {
+  name: "jeong", // Property(속성)
+  greeting() {
+    console.log("hello!");
+  }, // Method(메서드)
+};
+
+person.greeting();
