@@ -23,7 +23,7 @@ console.log(result);
 
 console.log("Jeong " + "sang tae");
 console.log("Jeong " - "ong"); // NaN, 문자열을 숫자로 변환 실패
-console.log("hi" * 3); // 6, 문자열을 숫자로 변환 실패
+console.log("hi" * 3); // NaN, 문자열을 숫자로 변환 실패
 console.log("2" * 3); // 6, 문자열을 숫자로 변환 성공
 
 let userName = "Jeong";
