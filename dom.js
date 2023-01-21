@@ -3,3 +3,6 @@
 let alink = document.getElementById("external-link");
 
 alink.href = "https://google.com";
+
+alink = document.querySelector("#external-link");
+alink.href = "https://google.com";
