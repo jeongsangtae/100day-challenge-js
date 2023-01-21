@@ -33,6 +33,5 @@ console.dir(second);
 // 5. BONUS TASK: Try changing the text content of the <p> element
 //    you selected in (4) and set it to any other text of your choice
 
-// second.innerHTML = "It is a Links";
-
 second.textContent = "It is a Links";
+// second.innerHTML = "It is a Links";
