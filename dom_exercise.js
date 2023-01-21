@@ -1,7 +1,8 @@
 // 1. Select the <h1> element by "drilling into the DOM" and
 //    save it in a variable with a name of your choice
 
-let first = document.querySelector("h1");
+let first = document.body.children[0];
+// let first = document.body.firstElementChild;
 console.dir(first);
 
 // 2. Use the variable from (1) and get access to the "parent"
