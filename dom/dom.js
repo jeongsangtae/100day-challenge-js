@@ -32,3 +32,8 @@ firstH1Element.remove();
 
 // MOVE ELEMENTS
 firstPElement.parentElement.append(firstPElement);
+
+// innerHTML
+console.log(firstPElement.innerHTML);
+
+firstPElement.innerHTML = "Hi! This is <strong>important!</strong>";
