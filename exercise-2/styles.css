@@ -30,6 +30,6 @@ button:hover {
   border-color: rgb(221, 199, 5);
 }
 
-p.blue {
-  background-color: blue;
+.blue {
+  background-color: rgb(159, 159, 228);
 }
