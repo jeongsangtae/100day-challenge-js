@@ -9,10 +9,12 @@ function updateRemainingChars(event) {
 
   const remainingCharacters = maxAllowLength - enteredTextLength;
   remainingCharsElement.innerHTML = remainingCharacters;
-  if (enteredTextLength >= 50) {
-    remainingCharsElement.style.color = "red";
-  } else {
-    remainingCharsElement.style.color = "black";
+  if (enteredTextLength > 50) {
+    // remainingCharsElement.style.color = "red";
+    remainingCharsElement.classList.add("warning");
+  } else if (enteredTextLength <= 50) {
+    // remainingCharsElement.style.color = "black";
+    remainingCharsElement.classList.remove("warning");
   }
 }
 
