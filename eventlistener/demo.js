@@ -9,14 +9,20 @@ function updateRemainingChars(event) {
 
   const remainingCharacters = maxAllowLength - enteredTextLength;
   remainingCharsElement.innerHTML = remainingCharacters;
-  if (remainingCharacters < 10) {
+  console.log(remainingCharacters);
+  if (remainingCharacters === 0) {
     // remainingCharsElement.style.color = "red";
+    inputElement.classList.add("error");
+    remainingCharsElement.classList.add("error");
+  } else if (remainingCharacters < 10) {
     inputElement.classList.add("warning");
     remainingCharsElement.classList.add("warning");
+    inputElement.classList.remove("error");
+    remainingCharsElement.classList.remove("error");
   } else {
     // remainingCharsElement.style.color = "black";
-    inputElement.classList.remove("warning");
-    remainingCharsElement.classList.remove("warning");
+    inputElement.classList.remove("error", "warning");
+    remainingCharsElement.classList.remove("error", "warning");
   }
 }
 
