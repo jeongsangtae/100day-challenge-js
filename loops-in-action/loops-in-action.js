@@ -58,3 +58,44 @@ function displayUserData() {
 }
 
 displayUserDataButton.addEventListener("click", displayUserData);
+
+// 네번째 연습: 통계 주사위 돌리기 예제
+
+const rollDiceButton = document.querySelector("#statistics button");
+
+function rollDice() {
+  return Math.floor(Math.random() * 6) + 1;
+  // Math.floor(): = 5.64 => 5
+}
+
+function deriveNumberOfDiceRolls() {
+  const targetNumberInput = document.getElementById("user-target-number");
+  const diceRollsList = document.getElementById("dice-rolls");
+  const enteredNumber = targetNumberInput.value;
+
+  diceRollsList.innerHTML = "";
+
+  let hasRolledTargetNumber = false;
+  let numberOfRolls = 0;
+
+  while (!hasRolledTargetNumber) {
+    const rolledNumber = rollDice();
+    // if (rolledNumber == enteredNumber) {
+    //   hasRolledTargetNumber = true
+    // }
+    numberOfRolls++;
+    const newRollListItem = document.createElement("li");
+    const outputText = "Roll " + numberOfRolls + ": " + rolledNumber;
+    newRollListItem.innerHTML = outputText;
+    diceRollsList.append(newRollListItem);
+    hasRolledTargetNumber = rolledNumber == enteredNumber;
+  }
+
+  const outputTotalRolls = document.getElementById("output-total-rolls");
+  const outputTargetNumber = document.getElementById("output-target-number");
+
+  outputTargetNumber.innerHTML = enteredNumber;
+  outputTotalRolls.innerHTML = numberOfRolls;
+}
+
+rollDiceButton.addEventListener("click", deriveNumberOfDiceRolls);
