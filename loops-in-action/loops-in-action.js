@@ -19,3 +19,17 @@ function calculateSum() {
 }
 
 calculateSumButton.addEventListener("click", calculateSum);
+
+// 두번째 연습: 하이라이트 링크
+
+const highlightLinkButton = document.querySelector("#highlight-links button");
+
+function highlightLinks() {
+  const aElements = document.querySelectorAll("#highlight-links a");
+
+  for (const aElement of aElements) {
+    aElement.classList.add("highlight");
+  }
+}
+
+highlightLinkButton.addEventListener("click", highlightLinks);
