@@ -33,3 +33,28 @@ function highlightLinks() {
 }
 
 highlightLinkButton.addEventListener("click", highlightLinks);
+
+// 세번째 연습: 사용자 데이터 표시 작업
+
+const dummyUserData = {
+  firstName: "Jeong",
+  lastName: "SangTae",
+  age: 31,
+};
+
+const displayUserDataButton = document.querySelector("#user-data button");
+
+function displayUserData() {
+  const outputUserData = document.getElementById("output-user-data");
+
+  outputUserData.innerHTML = "";
+
+  for (const key in dummyUserData) {
+    const newUserDataListItem = document.createElement("li");
+    const outputText = key.toUpperCase() + ": " + dummyUserData[key];
+    newUserDataListItem.innerHTML = outputText;
+    outputUserData.append(newUserDataListItem);
+  }
+}
+
+displayUserDataButton.addEventListener("click", displayUserData);
